@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Title from './section/Title';
-import delay from 'delay';
+import Area from './section/Area';
 import { Col, Row } from 'react-bootstrap';
 import { animated, useSpring, interpolate } from 'react-spring';
 import './App.css';
@@ -46,7 +46,7 @@ const App = () => {
               </Row>
             </div>
             <div className="section">
-              <p>Section 2</p>
+              <Area />
             </div>
           </ReactFullpage.Wrapper>
         );
