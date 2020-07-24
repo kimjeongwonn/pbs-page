@@ -1,18 +1,18 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { useSpring, animated, config } from 'react-spring';
 
 const Area = () => {
   return (
     <Container className="area">
       <Row className="h-75 justify-content-center align-items-center text-center">
-        <Col lg={6} sm={12} className="text-lg-left">
+        <Col lg={5} sm={12} className="text-lg-left">
           <h1>
             Business Area of
             <br />
             Plumbug Studio
           </h1>
         </Col>
+        <Col className="separator"></Col>
         <Col lg={6} sm={12} className="circle-container d-flex justify-content-center align-items-center">
           <div className="circle-item d-flex justify-content-center align-items-center i1">
             <div className="circle-text">WEB</div>

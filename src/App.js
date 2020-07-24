@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Title from './section/Title';
 import Area from './section/Area';
 import { Col, Row } from 'react-bootstrap';
-import { animated, useSpring, interpolate } from 'react-spring';
+import { animated, useSpring } from 'react-spring';
 import './App.css';
 
 const App = () => {
   const arrowProps = useSpring({
-    config: {},
     from: { xy: [0, -10], o: 0 },
     to: async (next) => {
       await next({ xy: [0, 0], o: 30 });
@@ -23,8 +22,8 @@ const App = () => {
     <ReactFullpage
       //fullpage options
       scrollingSpeed={1000} /* Options here */
-      render={({ state, fullpageApi }) => {
-        console.log(state);
+      licenseKey={'YOUR_KEY_HERE'}
+      render={({ fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">

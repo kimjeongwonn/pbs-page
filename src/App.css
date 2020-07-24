@@ -4,11 +4,6 @@ html {
   user-select: none;
 }
 
-.logo {
-  background: no-repeat center url('./logo.png');
-  background-size: contain;
-}
-
 .scollBtn {
   transform: translate(0, -40px);
   height: 40px;
@@ -38,9 +33,9 @@ html {
 }
 
 .circle-container {
+  height: 40vmin;
   margin: 5rem 0;
   position: relative;
-  height: 50vmin;
   animation-name: rotate;
   animation-duration: 120s;
   animation-iteration-count: infinite;
@@ -48,14 +43,18 @@ html {
   animation-delay: 1s;
 }
 
-h4 {
-  /* color: white; */
+.separator {
+  height: 5rem;
+  width: 5rem;
+  border-right: 1px solid black;
+  transform-origin: right top;
+  transform: translateX(-100%) skew(-45deg);
 }
 
 .circle-container .circle-item {
   position: absolute;
-  width: 20vmin;
-  height: 20vmin;
+  width: 23vmin;
+  height: 23vmin;
   max-width: 10rem;
   max-height: 10rem;
   border-radius: 5rem;
@@ -64,22 +63,52 @@ h4 {
 }
 
 .i1 {
-  transform: rotate(calc((360deg / 6) * 1)) translate(0, 25vmin) rotate(calc((360deg / 6) * -1));
+  transform: rotate(calc((360deg / 6) * 1)) translate(0, 22vmin) rotate(calc((360deg / 6) * -1));
 }
 .i2 {
-  transform: rotate(calc((360deg / 6) * 2)) translate(0, 25vmin) rotate(calc((360deg / 6) * -2));
+  transform: rotate(calc((360deg / 6) * 2)) translate(0, 22vmin) rotate(calc((360deg / 6) * -2));
 }
 .i3 {
-  transform: rotate(calc((360deg / 6) * 3)) translate(0, 25vmin) rotate(calc((360deg / 6) * -3));
+  transform: rotate(calc((360deg / 6) * 3)) translate(0, 22vmin) rotate(calc((360deg / 6) * -3));
 }
 .i4 {
-  transform: rotate(calc((360deg / 6) * 4)) translate(0, 25vmin) rotate(calc((360deg / 6) * -4));
+  transform: rotate(calc((360deg / 6) * 4)) translate(0, 22vmin) rotate(calc((360deg / 6) * -4));
 }
 .i5 {
-  transform: rotate(calc((360deg / 6) * 5)) translate(0, 25vmin) rotate(calc((360deg / 6) * -5));
+  transform: rotate(calc((360deg / 6) * 5)) translate(0, 22vmin) rotate(calc((360deg / 6) * -5));
 }
 .i6 {
-  transform: rotate(calc((360deg / 6) * 6)) translate(0, 25vmin) rotate(calc((360deg / 6) * -6));
+  transform: rotate(calc((360deg / 6) * 6)) translate(0, 22vmin) rotate(calc((360deg / 6) * -6));
+}
+
+@media (max-width: 991.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .separator {
+    margin: 2rem 0 2rem;
+    height: 3rem;
+    transform: translateX(-45%) skew(-45deg);
+  }
+  .i1 {
+    transform: rotate(calc((360deg / 6) * 1)) translate(0, 27vmin) rotate(calc((360deg / 6) * -1));
+  }
+  .i2 {
+    transform: rotate(calc((360deg / 6) * 2)) translate(0, 27vmin) rotate(calc((360deg / 6) * -2));
+  }
+  .i3 {
+    transform: rotate(calc((360deg / 6) * 3)) translate(0, 27vmin) rotate(calc((360deg / 6) * -3));
+  }
+  .i4 {
+    transform: rotate(calc((360deg / 6) * 4)) translate(0, 27vmin) rotate(calc((360deg / 6) * -4));
+  }
+  .i5 {
+    transform: rotate(calc((360deg / 6) * 5)) translate(0, 27vmin) rotate(calc((360deg / 6) * -5));
+  }
+  .i6 {
+    transform: rotate(calc((360deg / 6) * 6)) translate(0, 27vmin) rotate(calc((360deg / 6) * -6));
+  }
 }
 
 .circle-item .circle-text {
