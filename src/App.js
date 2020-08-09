@@ -1,19 +1,28 @@
 import React from 'react';
 import Title from './section/Title';
 import Area from './section/Area';
-import { Col, Row } from 'react-bootstrap';
-import { animated, useSpring } from 'react-spring';
-import './App.css';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 const App = () => {
   return (
     <>
-      <div className="page">
-        <Title />
-      </div>
-      <div className="page">
-        <Area />
-      </div>
+      <ReactFullpage
+        //fullpage options
+        licenseKey={process.env.REACT_APP_FULLPAGEKEY}
+        scrollingSpeed={1000}
+        render={({ state, fullpageApi }) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <Title />
+              </div>
+              <div className="section">
+                <Area />
+              </div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
     </>
   );
 };
